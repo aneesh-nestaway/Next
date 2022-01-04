@@ -1,0 +1,73 @@
+@import '../../styles/Color.module.scss';
+
+.naCheckboxOuterContainer {
+  padding: 0 10px 10px 0;
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .inputCheckbox {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border: solid black;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid $grey2;
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  .container {
+    &:hover input ~ .checkmark {
+      background-color: white;
+    }
+
+    .inputCheckbox:checked ~ .checkmark {
+      background-color: $secondary;
+      border: 1px solid $secondary;
+    }
+  }
+
+  .checkmark::after {
+    content: " ";
+    position: absolute;
+    display: none;
+  }
+
+  .container {
+    input:checked ~ .checkmark::after {
+      display: block;
+    }
+
+    .checkmark::after {
+      left: 5px;
+      top: 1px;
+      width: 3px;
+      height: 9px;
+      color: black;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}

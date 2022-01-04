@@ -1,0 +1,11 @@
+@import '../../../styles/Color.module.scss';
+
+.faqList {
+  .title {
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+  .subtext {
+    color: $grey2;
+  }
+}

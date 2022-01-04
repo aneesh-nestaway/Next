@@ -1,0 +1,24 @@
+@import '../../styles/Color.module.scss';
+
+.button {
+  padding: 12px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  &.primary {
+    background-color: black;
+  }
+  &.secondary {
+    background-color: $secondary;
+  }
+  &.disabled {
+    background-color: $grey2;
+    color: #dddddd;
+  }
+  &.wide {
+    display: block;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../../styles/Color.module.scss';
+
+.referTenantConatainer {
+  background-color: $grey6;
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+    .note {
+      padding: 30px 0;
+      color: $grey2;
+      .image {
+        margin-top: 20px;
+      }
+    }
+    .leftWrap {
+      width: 60%;
+      padding-right: 100px;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 20px;
+      }
+      .referMainContent {
+        font-size: 22px;
+        .rewardAmount {
+          color: $rewardGreen;
+        }
+      }
+    }
+    .rightWrap {
+      width: 40%;
+      padding: 30px;
+      background-color: $white;
+      box-shadow: 0 2px 14px 0 rgb(0 0 0 / 12%);
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+      .form {
+        .inputItem {
+          margin-bottom: 20px;
+        }
+        .titleWrap {
+          display: flex;
+          margin-bottom: 20px;
+          .text{
+            padding-left: 15px;
+          .title {
+            font-size: 16px;
+          }
+          .subTitle {
+            color: $brown;
+            font-size: 12px;
+          }
+        }
+        }
+      }
+    }
+  }
+  .faqContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: $white;
+    @media screen and (max-width: 767px) {
+      padding: 50px 20px;
+    }
+    .wrapper {
+      flex-direction: column;
+      .faqHeading {
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .faqListWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+        .faq {
+          width: 50%;
+          padding-bottom: 20px;
+          padding-right: 20px;
+          @media screen and (max-width: 767px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

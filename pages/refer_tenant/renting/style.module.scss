@@ -1,0 +1,51 @@
+@import '../../../styles/Color.module.scss';
+
+.rentingContainer {
+  padding: 50px 0;
+  background-color: $yellow;
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    @media screen and (max-width: 767px) {
+      padding: 20px;
+      flex-direction: column;
+    }
+    .leftWidget {
+      width: 30%;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+      .heading {
+        font-size: 32px;
+      }
+      a {
+        padding: 10px;
+        border-radius: 2px;
+        border: solid 1px $black;
+        display: inline-block;
+      }
+    }
+    .rightWidget {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: 767px) {
+        margin-top: 20px;
+        width: 100%;
+      }
+      .rentingTile {
+        padding-right: 10px;
+        .title {
+          font-size: 20px;
+          padding-bottom: 10px;
+        }
+        .link {
+          padding-top: 10px;
+          color: $secondary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
